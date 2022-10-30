@@ -5,7 +5,13 @@ using Senparc.Ncf.Core.Exceptions;
 using Opathon.Xncf.WeixinManagerWxOpen.OHS.Local.PL;
 using System;
 using System.Threading.Tasks;
-
+using Senparc.Weixin.WxOpen.Entities;
+using System.Text;
+using Senparc.Weixin.WxOpen.AdvancedAPIs.WxApp.WxAppJson;
+using Senparc.CO2NET.Helpers;
+using Senparc.Weixin.WxOpen.AdvancedAPIs.Sns;
+using Senparc.Weixin.WxOpen.Containers;
+using Senparc.Weixin;
 
 namespace Opathon.Xncf.WeixinManagerWxOpen.OHS.Local.AppService
 {
@@ -32,6 +38,31 @@ namespace Opathon.Xncf.WeixinManagerWxOpen.OHS.Local.AppService
             {
                 await Task.Delay(100);
                 return 200;
+            });
+        }
+
+
+        [ApiBind(ApiRequestMethod = ApiRequestMethod.Post)]
+        public async Task<AppResponseBase<string>> DecryptAESAsync(string Key, string IV, string EncodedData)
+        {
+            return await this.GetResponseAsync<AppResponseBase<string>, string>(async (response, logger) =>
+            {
+                try
+                {
+                    //AESDecrypt
+                    var decstr = EncryptHelper.AESDecrypt(Convert.FromBase64String(EncodedData), Encoding.UTF8.GetBytes(IV), Key);
+                    var result = Encoding.UTF8.GetString(decstr);
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    logger.Append(ex.Message);
+                    logger.Append(ex.StackTrace);
+                    logger.SaveLogs("解密失败");
+
+                    response.Success = false;
+                    return ex.Message;
+                }
             });
         }
 

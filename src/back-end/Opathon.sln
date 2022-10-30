@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XncfModules", "XncfModules"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{744DC83D-AFEC-4833-9040-B427F5134D4B}"
 	ProjectSection(SolutionItems) = preProject
-		..\README.md = ..\README.md
+		..\..\README.md = ..\..\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Senparc.Web", "Senparc.Web\Senparc.Web.csproj", "{6F3C7D09-7FA4-41B5-9E91-945DB61DEB48}"
@@ -46,7 +46,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sennparc.Xncf.WeixinManager
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Senparc.Xncf.WeixinManagerTenPayV3Tests", "Extensions\Senparc.Xncf.WeixinManagerTenPayV3Tests\Senparc.Xncf.WeixinManagerTenPayV3Tests.csproj", "{9DF17633-C3E5-4AC2-AE97-EA228A5B23D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opathon.Xncf.WeixinManagerWxOpen", "Opathon.Xncf.WeixinManagerWxOpen\Opathon.Xncf.WeixinManagerWxOpen.csproj", "{5EB072D3-184D-4553-B8A7-7935F1B11631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opathon.Xncf.WeixinManagerWxOpen", "Opathon.Xncf.WeixinManagerWxOpen\Opathon.Xncf.WeixinManagerWxOpen.csproj", "{5EB072D3-184D-4553-B8A7-7935F1B11631}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
