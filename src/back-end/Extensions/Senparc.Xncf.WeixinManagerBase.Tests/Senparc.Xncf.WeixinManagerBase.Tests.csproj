@@ -10,16 +10,10 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
-    <None Remove="App_Data\DataBase\SenparcConfig.config" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="App_Data\DataBase\SenparcConfig.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -40,6 +34,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Senparc.Xncf.WeixinManagerBase\Senparc.Xncf.WeixinManagerBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App_Data\DataBase\SenparcConfig.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
