@@ -1,7 +1,11 @@
 # Group4
 OpathonGroup4
 
-[[Version]](readme.en.md)
+对对队
+
+![Logo](imgs/OpathonG4.png)
+
+[[Version]](readme.md)
  
 如果你喜欢这个项目，请给我们一个 ★Star ：)
 
@@ -29,4 +33,4 @@ License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF 
 either express or implied. See the License for the specific language governing permissions 
 and limitations under the License.
 ```
-Detail: https://github.com/OpathonGame2022/Group4/license.md
+Detail: https://github.com/OpathonGame2022/Group4/docs/license.md
